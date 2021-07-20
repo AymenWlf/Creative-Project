@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Bellota Text", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.section1 {
+    height: 100vh;
+    width: 100%;
+}
+
+.navbar {
+    height: 50vh;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.nav-sections {
+    letter-spacing: 2px;
+    margin-top: 25px;
+    width: 10px;
+    height: 200px;
+    word-wrap: break-word;
+    text-align: center;
+    transition: width 0.5s;
+}
+
+.nav-sections:hover {
+    width: 150px;
+    background-color: white;
+    transition: width 1.2s;
+}
