@@ -12,15 +12,47 @@
 .section1 {
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
+}
+
+.floating-bg {
+    width: 150vw;
+    height: 150vw;
+    background-color: rgba(50, 231, 255, 0.8);
+    position: absolute;
+    border-radius: 45%;
+    top: -125vw;
+    left: calc(50% - 75vw);
+    animation: rotate 30s infinite;
+}
+
+.floating-bg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 231, 255, 0.1);
+    position: absolute;
+    border-radius: 40%;
+    animation: rotate 30s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .navbar {
-    height: 50vh;
-    background-color: aqua;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    z-index: 20;
+    position: relative;
 }
 
 .nav-sections {
@@ -31,10 +63,12 @@
     word-wrap: break-word;
     text-align: center;
     transition: width 0.5s;
+    color: #fff;
+    font-weight: 700;
 }
 
 .nav-sections:hover {
     width: 150px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     transition: width 1.2s;
 }
